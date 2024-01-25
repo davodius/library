@@ -9,12 +9,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value="/api/bookshop")
-public class bookController {
+public class BookController {
     @Autowired
     Book book;
+    // app app!!! Här ska det inte vara en Book, du ska ha din BookService här. Byt till nedan:
+    // BookService bookService;
 
     // Creating a book.
     @PostMapping()
+    // STOR bokstav på book, ändra till Book
     public book createBook(@RequestBody Book book) {
         return bookService.createBook(book);
     }
