@@ -14,11 +14,6 @@ public class Book {
 
     private String author;
 
-    // private String procuredBy = "Librarian";
-    //@CreatedDate          FRÅGA OM.
-    //private Date created_at;
-
-
     public Book() {
     }
 

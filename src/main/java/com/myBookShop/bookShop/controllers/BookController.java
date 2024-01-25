@@ -1,6 +1,7 @@
 package com.myBookShop.bookShop.controllers;
 
 
+import com.myBookShop.bookShop.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,14 +12,14 @@ import java.util.List;
 @RequestMapping(value="/api/bookshop")
 public class BookController {
     @Autowired
-    Book book;
+    BookService bookService;
     // app app!!! Här ska det inte vara en Book, du ska ha din BookService här. Byt till nedan:
     // BookService bookService;
 
     // Creating a book.
     @PostMapping()
     // STOR bokstav på book, ändra till Book
-    public book createBook(@RequestBody Book book) {
+    public Book createBook(@RequestBody Book book) {
         return bookService.createBook(book);
     }
 
