@@ -4,7 +4,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "books")
-public class book {
+public class Book {
     @Id
     private String id;
 
@@ -19,7 +19,7 @@ public class book {
     //private Date created_at;
 
 
-    public book() {
+    public Book() {
     }
 
     public String getId() {
