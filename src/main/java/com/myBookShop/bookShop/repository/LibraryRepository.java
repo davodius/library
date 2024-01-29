@@ -1,8 +1,8 @@
 package com.myBookShop.bookShop.repository;
 
+
+import com.myBookShop.bookShop.models.Book;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.awt.print.Book;
-
-public interface LibraryRepository extends MongoRepository<Book, String>{
+public interface LibraryRepository extends MongoRepository<Book, String> {
 }
