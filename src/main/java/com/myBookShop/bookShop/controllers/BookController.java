@@ -17,20 +17,20 @@ public class BookController {
     BookService bookService;
 
     // Creating a book.
-    @PostMapping()
+    @PostMapping("/addbook")
     // STOR bokstav på book, ändra till Book
     public Book createBook(@RequestBody Book book) {
         return bookService.createBook(book);
     }
 
     // Getting all the books.
-    @GetMapping("/all")
+    @GetMapping("/allbooks")
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
     // Put (Updating a book).
-    @PutMapping()
+    @PutMapping("/bookupdate")
     public Book updateBook(@RequestBody Book book) {
         return bookService.updateBook(book);
     }
