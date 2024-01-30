@@ -16,32 +16,32 @@ public class BookController {
     // app app!!! Här ska det inte vara en Book, du ska ha din BookService här. Byt till nedan:
     BookService bookService;
 
-    // Creating a book.
-    @PostMapping("/addbook")
+    // POST (Creating a book).
+    @PostMapping("/add_book")
     // STOR bokstav på book, ändra till Book
     public Book createBook(@RequestBody Book book) {
         return bookService.createBook(book);
     }
 
-    // Getting all the books.
-    @GetMapping("/allbooks")
+    // GET (Getting all the books).
+    @GetMapping("/all_books")
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
-    // Put (Updating a book).
-    @PutMapping("/bookupdate")
+    // PUT (Updating a book).
+    @PutMapping("/book_update/{id}")
     public Book updateBook(@RequestBody Book book) {
         return bookService.updateBook(book);
     }
 
-    // Getting book by id.
+    // GetById (Getting book by id).
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Book getBookById(@PathVariable String id) {
         return bookService.getBookById(id);
     }
 
-    // Deleting a book.
+    // DeleteBookById (Deleting a book).
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public String deleteBook(@PathVariable String id) {
         return bookService.deleteBook(id);
