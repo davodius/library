@@ -1,7 +1,8 @@
 package com.myBookShop.bookShop.controllers;
 
 
-import com.myBookShop.bookShop.models.Book;
+import com.myBookShop.bookShop.models.User;
+import com.myBookShop.bookShop.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +25,7 @@ public class UserController {
     // GET (Getting all the users).
     @GetMapping("/all")
     public List<User> getAllUsers() {
-        return usersService.getAllUsers();
+        return userService.getAllUsers();
     }
 
     // PUT (Updating a user).

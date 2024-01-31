@@ -1,7 +1,8 @@
 package com.myBookShop.bookShop.services;
 
 
-import com.myBookShop.bookShop.models.Book;
+import com.myBookShop.bookShop.models.User;
+import com.myBookShop.bookShop.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public class UserService {
 
     // Getting all users
     public List<User> getAllUsers() {
-        return libraryRepository.findAll();
+        return userRepository.findAll();
     }
 
     // Updating a user
