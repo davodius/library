@@ -16,7 +16,7 @@ public class BookController {
     // app app!!! Här ska det inte vara en Book, du ska ha din BookService här. Byt till nedan:
     BookService bookService;
 
-    // POST (Creating a book).
+    // POST (Creating a new book).
     @PostMapping("/add")
     // STOR bokstav på book, ändra till Book
     public Book createBook(@RequestBody Book book) {
@@ -46,9 +46,5 @@ public class BookController {
     public String deleteBook(@PathVariable String id) {
         return bookService.deleteBook(id);
     }
-
-
-
-
 
 }
