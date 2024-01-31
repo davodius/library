@@ -42,7 +42,7 @@ public class BookController {
     }
 
     // DeleteBookById (Deleting a book).
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     public String deleteBook(@PathVariable String id) {
         return bookService.deleteBook(id);
     }
