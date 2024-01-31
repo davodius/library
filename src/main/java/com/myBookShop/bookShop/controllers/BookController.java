@@ -36,7 +36,7 @@ public class BookController {
     }
 
     // GetById (Getting book by id).
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/get_by_id/{id}", method = RequestMethod.GET)
     public Book getBookById(@PathVariable String id) {
         return bookService.getBookById(id);
     }
