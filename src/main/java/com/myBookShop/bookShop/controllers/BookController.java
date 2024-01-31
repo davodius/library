@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/api/library")
+@RequestMapping(value="/api/library/book")
 public class BookController {
     @Autowired
     //Book book;
@@ -17,26 +17,26 @@ public class BookController {
     BookService bookService;
 
     // POST (Creating a book).
-    @PostMapping("/add_book")
+    @PostMapping("/add")
     // STOR bokstav på book, ändra till Book
     public Book createBook(@RequestBody Book book) {
         return bookService.createBook(book);
     }
 
     // GET (Getting all the books).
-    @GetMapping("/all_books")
+    @GetMapping("/all")
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
     // PUT (Updating a book).
-    @PutMapping("/book_update/{id}")
+    @PutMapping("/update/{id}")
     public Book updateBook(@RequestBody Book book) {
         return bookService.updateBook(book);
     }
 
     // GetById (Getting book by id).
-    @RequestMapping(value = "/get_by_id/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     public Book getBookById(@PathVariable String id) {
         return bookService.getBookById(id);
     }
