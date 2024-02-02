@@ -2,7 +2,6 @@ package com.myBookShop.bookShop.services;
 
 
 import com.myBookShop.bookShop.models.BorrowedBook;
-import com.myBookShop.bookShop.models.User;
 import com.myBookShop.bookShop.repository.BorrowedBooksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,12 +18,12 @@ public class BorrowedBooksService {
     }
 
     // Getting all borrowed books
-    public List<User> getAllBorrowedBooks() {
+    public List<BorrowedBook> getAllBorrowedBooks() {
         return borrowedBooksRepository.findAll();
     }
 
     // Updating a borrowed book
-    public User updateBorrowedBook(BorrowedBook borrowedBook) {
+    public BorrowedBook updateBorrowedBook(BorrowedBook borrowedBook) {
         return borrowedBooksRepository.save(borrowedBook);
     }
 

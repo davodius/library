@@ -2,7 +2,6 @@ package com.myBookShop.bookShop.controllers;
 
 
 import com.myBookShop.bookShop.models.BorrowedBook;
-import com.myBookShop.bookShop.models.User;
 import com.myBookShop.bookShop.services.BorrowedBooksService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,13 +23,13 @@ public class BorrowedBooksController {
 
     // GET (Getting all the borrowed books).
     @GetMapping("/all")
-    public List<User> getAllBorrowedbooks() {
+    public List<BorrowedBook> getAllBorrowedbooks() {
         return borrowedBooksService.getAllBorrowedBooks();
     }
 
     // PUT (Updating a borrowed book).
     @PutMapping("/update/{id}")
-    public User updateBorrowedBook(@RequestBody BorrowedBook borrowedBook) {
+    public BorrowedBook updateBorrowedBook(@RequestBody BorrowedBook borrowedBook) {
         return borrowedBooksService.updateBorrowedBook(borrowedBook);
     }
 
