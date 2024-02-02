@@ -1,19 +1,24 @@
 package com.myBookShop.bookShop.models;
 
-public class Loan {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "borrowedbooks")
+public class BorrowedBook {
+    @Id
     private String id;
 
     private String title;
 
-    private String loanedBy;
+    private String borrowedBy;
 
-    private String loanDate;
+    private String borrowedDate;
 
     private String returnDate;
 
     private boolean bookReturned;
 
-    public Loan() {
+    public BorrowedBook() {
     }
 
     public String getId() {
@@ -24,12 +29,12 @@ public class Loan {
         return title;
     }
 
-    public String getLoanedBy() {
-        return loanedBy;
+    public String getBorrowedBy() {
+        return borrowedBy;
     }
 
-    public String getLoanDate() {
-        return loanDate;
+    public String getBorrowedDate() {
+        return borrowedDate;
     }
 
     public String getReturnDate() {
