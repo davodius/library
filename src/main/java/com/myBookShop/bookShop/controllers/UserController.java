@@ -15,7 +15,6 @@ public class UserController {
     @Autowired
     UserService userService;
 
-
     // POST (Creating a new user).
     @PostMapping("/add")
     public User createUser(@RequestBody User user) {
@@ -34,13 +33,13 @@ public class UserController {
         return userService.updateUser(user);
     }
 
-    // GetById (Getting a user by id).
+    // Get by id (Getting a user by id).
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
     public User getUserById(@PathVariable String id) {
         return userService.getUserById(id);
     }
 
-    // DeleteUserById (Deleting a user).
+    // Delete user by id (Deleting a user).
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     public String deleteUser(@PathVariable String id) {
         return userService.deleteUser(id);

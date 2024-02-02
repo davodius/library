@@ -3,6 +3,7 @@ package com.myBookShop.bookShop.services;
 
 import com.myBookShop.bookShop.models.BorrowedBook;
 import com.myBookShop.bookShop.models.User;
+import com.myBookShop.bookShop.repository.BorrowedBooksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,30 +12,31 @@ import java.util.List;
 @Service
 public class BorrowedBooksService {
     @Autowired
-    // Creating a Loan
-    public BorrowedBooks createBorrowedBook(BorrowedBook borrowedBook) {
+    BorrowedBooksRepository borrowedBooksRepository;
+    // Creating a borrowed book
+    public BorrowedBook createBorrowedBook(BorrowedBook borrowedBook) {
         return borrowedBooksRepository.save(borrowedBook);
     }
 
-    // Getting all loans
+    // Getting all borrowed books
     public List<User> getAllBorrowedBooks() {
         return borrowedBooksRepository.findAll();
     }
 
-    // Updating a loan
+    // Updating a borrowed book
     public User updateBorrowedBook(BorrowedBook borrowedBook) {
         return borrowedBooksRepository.save(borrowedBook);
     }
 
-    // Getting a specific loan by id
-    public Loan getBorrowedBookById(String id) {
+    // Getting a specific borrowed book by id
+    public BorrowedBook getBorrowedBookById(String id) {
         return borrowedBooksRepository.findById(id).get();
     }
 
-    // Delete a specific loan by using id
+    // Delete a specific borrowed book by using id
     public String deleteBorrowedBook(String id) {
         borrowedBooksRepository.deleteById(id);
-        return "Loan has been terminated";
+        return "The borrowed book has been returned";
     }
 
 }
