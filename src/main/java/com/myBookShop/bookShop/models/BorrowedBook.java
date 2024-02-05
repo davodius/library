@@ -18,6 +18,7 @@ public class BorrowedBook {
     @CreatedDate
     private Date borrowedDate;
 
+
     private String returnDate;
 
     private boolean bookReturned;
