@@ -6,6 +6,7 @@ import com.myBookShop.bookShop.repository.BorrowedBooksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -38,9 +39,9 @@ public class BorrowedBooksService {
         borrowedBooksRepository.deleteById(id);
         return "The borrowed book has been returned";
     }
-/*
-    public BorrowedBooks returnBook(Book book) {
-        book.setBorrowedDate(new Date());
+
+    public BorrowedBooks returnBorrowedBook(BorrowedBook borrowedBook) {
+        borrowedBook.setBorrowedDate(new Date());
     }
-*/
+
 }
