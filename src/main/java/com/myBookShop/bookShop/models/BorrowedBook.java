@@ -4,6 +4,8 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 @Document(collection = "borrowedbooks")
 public class BorrowedBook {
     @Id
@@ -14,7 +16,7 @@ public class BorrowedBook {
     private String borrowedBy;
 
     @CreatedDate
-    private String borrowedDate;
+    private Date borrowedDate;
 
     private String returnDate;
 
@@ -35,7 +37,7 @@ public class BorrowedBook {
         return borrowedBy;
     }
 
-    public String getBorrowedDate() {
+    public Date getBorrowedDate() {
         return borrowedDate;
     }
 
