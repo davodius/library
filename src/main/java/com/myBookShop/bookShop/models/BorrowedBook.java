@@ -1,5 +1,6 @@
 package com.myBookShop.bookShop.models;
 
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -12,6 +13,7 @@ public class BorrowedBook {
 
     private String borrowedBy;
 
+    @CreatedDate
     private String borrowedDate;
 
     private String returnDate;
