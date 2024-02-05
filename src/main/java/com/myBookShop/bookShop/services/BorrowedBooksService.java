@@ -38,5 +38,9 @@ public class BorrowedBooksService {
         borrowedBooksRepository.deleteById(id);
         return "The borrowed book has been returned";
     }
-
+/*
+    public BorrowedBooks returnBook(Book book) {
+        book.setBorrowedDate(new Date());
+    }
+*/
 }

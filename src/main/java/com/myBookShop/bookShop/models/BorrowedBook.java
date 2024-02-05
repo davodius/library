@@ -39,12 +39,6 @@ public class BorrowedBook {
         return borrowedDate;
     }
 
-    public BorrowedBook borrowedDate(Book book) {
-        book.borrowedDate(new borrowedDate());
-        return private Date borrowedDate;
-    }
-
-
     public String getReturnDate() {
         return returnDate;
     }
