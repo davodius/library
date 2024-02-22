@@ -15,7 +15,7 @@ public class BorrowedBooksService {
 
     // Creating a borrowed book
     public BorrowedBook createBorrowedBook(BorrowedBook borrowedBook) {
-       //borrowedBook.calculateReturnDate(borrowedBook.getBorrowedDate());
+            //borrowedBook.calculateReturnDate(borrowedBook.getBorrowedDate());   // här markeras den när message = must not be null
         return borrowedBooksRepository.save(borrowedBook);
     }
 

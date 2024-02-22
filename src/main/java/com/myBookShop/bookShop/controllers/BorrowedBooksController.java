@@ -18,7 +18,7 @@ public class BorrowedBooksController {
     // POST (Creating a new borrowed book).
     @PostMapping("/add")
     public BorrowedBook createBorrowedBook(@RequestBody BorrowedBook borrowedBook) {
-        return borrowedBooksService.createBorrowedBook(borrowedBook);
+        return borrowedBooksService.createBorrowedBook(borrowedBook); // här markeras den när message = must not be null
     }
 
     // GET (Getting all the borrowed books).
