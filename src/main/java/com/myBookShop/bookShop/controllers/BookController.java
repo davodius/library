@@ -12,8 +12,7 @@ import java.util.List;
 @RequestMapping(value="/api/library/book")
 public class BookController {
     @Autowired
-    //Book book;
-    // app app!!! Här ska det inte vara en Book, du ska ha din BookService här. Byt till nedan:
+
     BookService bookService;
 
     // POST (Creating a new book).
